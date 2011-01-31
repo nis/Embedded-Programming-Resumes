@@ -1,0 +1,122 @@
+\documentclass[a4wide,10pt]{article}
+%\usepackage{a4wide}
+\usepackage[applemac,utf8]{inputenc}
+\usepackage[danish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{pdfsync}
+\usepackage{amsmath,amssymb,amsfonts} 
+\usepackage[pdftex]{graphicx}
+\usepackage{wrapfig}
+\usepackage{color}
+\usepackage[small,bf]{caption}
+
+\begin{document}
+\title{Embedded Programming: C resumes}
+\author{Nis Sarup}
+\date{\today}
+\maketitle
+
+	\section{Language Basics} % (fold)
+	\label{sec:language_basics}
+		\subsection{Characteristics of C} % (fold)
+		\label{sub:characteristics_of_c}
+			\begin{itemize}
+				\item Officially published in 1978
+				\item Source code portability
+				\item operates "close to the machine"
+				\item Efficiency
+				\item Compiler very compact
+				\item C Library provides functions not in the core
+				\item Library (mostly) written in portable C
+			\end{itemize}
+		% subsection characteristics_of_c (end)
+		
+		\subsection{The Structure of C Programs} % (fold)
+		\label{sub:the_structure_of_c_programs}
+			\begin{itemize}
+				\item Statements, Blocks, Functions
+				\item Starts with main()
+				\item Prior declaration needed for compiler
+				\item Definition of a function also declaration
+				\item No nested functions
+			\end{itemize}
+		% subsection the_structure_of_c_programs (end)
+		
+		\subsection{Source Files} % (fold)
+		\label{sub:source_files}
+			\begin{itemize}
+				\item Internal structure:
+					\begin{itemize}
+						\item Preprocessor Directives
+						\item Global Declarations
+						\item Function definitions
+					\end{itemize}
+				\item Suffix for source files: .c
+				\item Header files can contain commonly used Preprocessor Directives, suffix: .h
+				\item Header files can be included in source files with \#include
+				\item Can i turn include other files
+				\item White space is unimportant, except in Preprocessor Directives
+			\end{itemize}
+		% subsection source_files (end)
+		
+		\subsection{Comments} % (fold)
+		\label{sub:comments}
+			\begin{itemize}
+				\item /* Block comments */
+				\item // endline comments
+				\item Comments does not work inside String Literals: "I am /* not a comment*/"
+				\item Commenting out parts of a program often used.
+			\end{itemize}
+		% subsection comments (end)
+		
+		\subsection{Character Sets} % (fold)
+		\label{sub:character_sets}
+			\begin{itemize}
+				\item Two sets according to environment:
+					\begin{itemize}
+						\item Translation environment (compilation): source character set
+						\item Execution Environment (running program): execution character set
+					\end{itemize}
+			\end{itemize}
+		% subsection character_sets (end)
+		
+		\subsection{Identifiers} % (fold)
+		\label{sub:identifiers}
+			\begin{itemize}
+				\item Names of variables, functions, macros, structures etc defined in a C program.
+				\item 37 reserved keywords in C
+				\item Format:
+					\begin{itemize}
+						\item a-z, A-Z
+						\item \_
+						\item 0-9, but not as the first character
+						\item Universal Characters from other languages
+					\end{itemize}
+				\item \_\_func\_\_ will evaluate to the name of the current function
+			\end{itemize}
+		% subsection identifiers (end)
+		
+		\subsection{Identifier Scope} % (fold)
+		\label{sub:identifier_scope}
+			\begin{itemize}
+				\item File Scope: Inside the translation unit
+				\item Block Scope: Often the same as function scope, but sometimes smaller
+				\item Function Prototype Scope: parameter names in function prototypes
+				\item Function Scope: Inside a function
+			\end{itemize}
+		% subsection identifier_scope (end)
+		
+		\subsection{How the C Compiler Works} % (fold)
+		\label{sub:how_the_c_compiler_works}
+			\begin{itemize}
+				\item Compiler compiles source into:
+					\begin{itemize}
+						\item Translation units
+						\item Object files
+						\item And then into the Executable file
+					\end{itemize}
+			\end{itemize}
+		% subsection how_the_c_compiler_works (end)
+	% section language_basics (end)
+
+\end{document}
