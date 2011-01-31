@@ -118,5 +118,105 @@
 			\end{itemize}
 		% subsection how_the_c_compiler_works (end)
 	% section language_basics (end)
-
+	
+	\newpage
+	
+	\section{Types} % (fold)
+	\label{sec:types}
+		\begin{itemize}
+			\item Object refers a location in memory
+			\item Named objects are called variables
+			\item sizeof(type) will yield the storage size of the object or type in bytes
+		\end{itemize}
+		
+		\subsection{Typology} % (fold)
+		\label{sub:typology}
+			\begin{itemize}
+				\item Basic type
+					\begin{itemize}
+						\item Integers
+						\item Floating point
+					\end{itemize}
+				\item Enumerated types
+				\item The type void
+				\item Derived types:
+					\begin{itemize}
+						\item Pointer
+						\item Array
+						\item Structure
+						\item Union
+						\item Function
+					\end{itemize}
+			\end{itemize}
+		% subsection typology (end)
+		
+		\subsection{Integer Types} % (fold)
+		\label{sub:integer_types}
+			\begin{tabular}{l c c}
+				\textbf{Type} & \textbf{Min.} & \textbf{Max.} \\
+				\hline \hline
+				char & same as below & same as below\\
+				\hline
+				unsigned char & 0 & 255 \\
+				\hline
+				signed char & -128 & 127 \\
+				\hline
+				int & -32,768 or -2,147,483,648 & 32,767 or 2,147,483,647 \\
+				\hline
+				unsigned int & 0 & 65,535 or 2,147,483,647 \\
+				\hline
+				short & -32,768 & 32,767 \\
+				\hline
+				unsigned short & 0 & 65,535 \\
+				\hline
+				long & -2,147,483,648 & 2,147,483,647 \\
+				\hline
+				unsigned long & 0 & 4,294,967,295 \\
+				\hline
+				long long & -9,223,372,036,854,775,808 & 9,223,372,036,854,775,807 \\
+				\hline
+				unsigned long long & 0 & 18,446,744,073,709,551,615 \\
+			\end{tabular}
+		% subsection integer_types (end)
+		
+		\subsection{Floating-Point Types} % (fold)
+		\label{sub:floating_point_types}
+			\begin{itemize}
+				\item Represents nonintegers with decimal points in any position
+			\end{itemize}
+			\begin{tabular}{l c c c}
+				\textbf{Type} & \textbf{Range} & \textbf{Min. positive value} & \textbf{Precision} \\
+				\hline \hline
+				float & $\pm 3.4 \cdot 10^{38}$ & $1.2 \cdot 10^{-38}$ & 6 digits \\
+				\hline
+				double & $\pm 1.7 \cdot 10^{308}$ & $2.3 \cdot 10^{-308}$ & 15 digits \\
+				\hline
+				long double & $\pm 1.1 \cdot 10^{4932}$ & $3.4 \cdot 10^{4932}$ & 19 digi \\
+			\end{tabular}
+		% subsection floating_point_types (end)
+		
+		\subsection{Enumerated Types} % (fold)
+		\label{sub:enumerated_types}
+			\begin{itemize}
+				\item enum [identifier] \{ enumerator-list \};
+				\item enum color \{ black, red, green, yellow, blue, white=7, gray \};
+				\item A list of a created types possible values
+				\item Can also be used to define constants instead of using \#define:
+					\begin{itemize}
+						\item enum \{ OFF, ON, STOP = 0, GO = 1, CLOSED = 0, OPEN = 1 \};
+					\end{itemize}
+			\end{itemize}
+		% subsection enumerated_types (end)
+		
+		\subsection{The Type void} % (fold)
+		\label{sub:the_type_void}
+			\begin{itemize}
+				\item Cannot be used for variables or constants
+				\item A function with no return values is of the type $void$
+				\item If a functions prototype is declared with $void$ as parameter the compiler would issue an error if that function is ever called with parameters
+				\item A void expression has no return value
+				\item A pointer of type $void *$ represents the address of an object but not its type
+			\end{itemize}
+		% subsection the_type_void (end)
+	% section types (end)
 \end{document}
